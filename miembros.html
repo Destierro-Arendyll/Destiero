@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título principal de la página de miembros -->
+    <title>Lista de Miembros - Hermandad DESTIERRO | Elvenar</title>
+    <!-- Descripción corta para buscadores -->
+    <meta name="description" content="Registro oficial de los 25 exiliados de la Hermandad DESTIERRO en Arendyll y sus bienes potenciados.">
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN PRINCIPAL  -->
+    <!-- ========================================== -->
+    <header>
+        <div class="logo">⚔️ DESTIERRO</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cronicas.html">Crónicas y Consejo 🔮</a>
+            <a href="edictos.html">Edictos Sagrados 📜</a>
+            <a href="miembros.html">Lista de Miembros ⚔️</a>
+            <a href="index.html#contacto">Reclutamiento</a>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- CONTENIDO PRINCIPAL: TABLA DE MIEMBROS     -->
+    <!-- ========================================== -->
+    <main class="miembros-container">
+        <a href="index.html" class="btn-volver">⬅️ Volver al Inicio</a>
+
+        <h1 class="titulo-miembros">░▒▓ Registro De Nuestras Almas (25/25) ▓▒░</h1>
+        <p class="subtitulo-miembros">Los 25 Exiliados que combaten y crecen juntos en Arendyll</p>
+
+        <!-- ========================================== -->
+        <!-- PANEL DE BUSCADOR Y FILTRO DE BIENES       -->
+        <!-- ========================================== -->
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px; background: rgba(20, 8, 35, 0.8); padding: 15px; border-radius: 6px; border: 1px solid #4a154b;">
+            <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; color: #d4af37; font-size: 0.85rem; font-weight: bold; margin-bottom: 5px;">🔎 Buscar Jugador:</label>
+                <input type="text" id="inputBuscador" onkeyup="filtrarTabla()" placeholder="Escribe un nombre..." style="width: 100%; padding: 8px; background: #0b0512; border: 1px solid #d4af37; color: #fff; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            
+            <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; color: #d4af37; font-size: 0.85rem; font-weight: bold; margin-bottom: 5px;">💎 Filtrar por Bien Potenciado:</label>
+                <select id="selectBien" onchange="filtrarTabla()" style="width: 100%; padding: 8px; background: #0b0512; border: 1px solid #d4af37; color: #fff; border-radius: 4px; box-sizing: border-box;">
+                    <option value="">-- Todos los Bienes --</option>
+                    <option value="Mármol">Mármol</option>
+                    <option value="Acero">Acero</option>
+                    <option value="Tablones">Tablones</option>
+                    <option value="Cristal">Cristal</option>
+                    <option value="Pergaminos">Pergaminos</option>
+                    <option value="Seda">Seda</option>
+                    <option value="Gemas">Gemas</option>
+                    <option value="Elixir">Elixir</option>
+                    <option value="Polvo mágico">Polvo Mágico</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TABLA DE JUGADORES Y CARGOS                -->
+        <!-- ========================================== -->
+        <table class="tabla-miembros" id="tablaMiembros">
+            <thead>
+                <tr>
+                    <th class="num-col">#</th>
+                    <th>Jugador</th>
+                    <th>Rango / Cargo</th>
+                    <th>Rol Principal</th>
+                    <th>Bienes Potenciados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ALTO CONCILIO (4 Miembros) -->
+                <!-- ALTO CONCILIO (4 Miembros) -->
+                <tr>
+                    <td class="num-col">1</td>
+                    <td><strong>SIDRAGASO</strong></td>
+                    <td><span class="rango-archimago">👑 Archimago</span></td>
+                    <td>Estrategia y Mando Supremo</td>
+                    <td>Acero, Cristal, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">2</td>
+                    <td><strong>Syltyn</strong></td>
+                    <td><span class="rango-maga">🔮 Hechicera Suprema</span></td>
+                    <td>Bruja Guardiana / Torneos</td>
+                    <td>Acero, Pergaminos, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">3</td>
+                    <td><strong>Trova</strong></td>
+                    <td><span class="rango-embajador">📜 Embajadora</span></td>
+                    <td>Canciller del Pacto y Lonja</td>
+                    <td>Mármol, Seda, Gemas</td>
+                </tr>
+                <tr>
+                    <td class="num-col">4</td>
+                    <td><strong>Rigober</strong></td>
+                    <td><span class="rango-embajador">⚔️ Embajador</span></td>
+                    <td>Custodio de Filas y Reclutamiento</td>
+                    <td>Tablones, Pergaminos, Polvo mágico</td>
+                </tr>
+
+                <!-- HERMANOS / COMPAÑEROS (21 Miembros) -->
+                <tr>
+                    <td class="num-col">5</td>
+                    <td>Antonia María</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">6</td>
+                    <td>Arisland</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Seda, Gemas</td>
+                </tr>
+                <tr>
+                    <td class="num-col">7</td>
+                    <td>BerserkVLC</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Acero, Pergaminos, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">8</td>
+                    <td>Drokos</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Pergaminos, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">9</td>
+                    <td>Dunagon</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Gemas</td>
+                </tr>
+                <tr>
+                    <td class="num-col">10</td>
+                    <td>Eduardo79</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">11</td>
+                    <td>Elaria Moonwhisper</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Seda, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">12</td>
+                    <td>Elfa Silvana</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Gemas</td>
+                </tr>
+                <tr>
+                    <td class="num-col">13</td>
+                    <td>Jubemaca</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Seda, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">14</td>
+                    <td>kataria</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Seda, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">15</td>
+                    <td>LadyMaeliaII</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Seda, Gemas</td>
+                </tr>
+                <tr>
+                    <td class="num-col">16</td>
+                    <td>mayteastur</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Acero, Cristal, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">17</td>
+                    <td>MuruBoss</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Acero, Pergaminos, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">18</td>
+                    <td>No soy tu bro</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Acero, Pergaminos, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">19</td>
+                    <td>Nubeceleste</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">20</td>
+                    <td>Princesa Amatista</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Elixir</td>
+                </tr>
+                <tr>
+                    <td class="num-col">21</td>
+                    <td>SparklyAndromeda87865</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Acero, Pergaminos, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">22</td>
+                    <td>Tiltan</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Pergaminos, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">23</td>
+                    <td>TXUTXYNIETO</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Mármol, Cristal, Gemas</td>
+                </tr>
+                <tr>
+                    <td class="num-col">24</td>
+                    <td>Zair</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Tablones, Seda, Polvo mágico</td>
+                </tr>
+                <tr>
+                    <td class="num-col">25</td>
+                    <td>VACANTE !!!</td>
+                    <td><span class="rango-hermano">🛡️ Hermano</span></td>
+                    <td>Torneo y Torre</td>
+                    <td>Envía tu solicitud, súmate a Destierro.</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- PIE DE PÁGINA                              -->
+    <!-- ========================================== -->
+    <footer>
+        <h3>⚔️ Hermandad DESTIERRO - Arendyll</h3>
+        <p>&copy; 2026 Hermandad DESTIERRO. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- SCRIPT DEL BUSCADOR Y FILTRO DE BIENES     -->
+    <!-- ========================================== -->
+    <script>
+        function filtrarTabla() {
+            const textoBusqueda = document.getElementById('inputBuscador').value.toLowerCase();
+            const bienSeleccionado = document.getElementById('selectBien').value.toLowerCase();
+            const tabla = document.getElementById('tablaMiembros');
+            const filas = tabla.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+            for (let i = 0; i < filas.length; i++) {
+                const celdaNombre = filas[i].getElementsByTagName('td')[1];
+                const celdaBienes = filas[i].getElementsByTagName('td')[4];
+
+                if (celdaNombre && celdaBienes) {
+                    const nombre = celdaNombre.textContent || celdaNombre.innerText;
+                    const bienes = celdaBienes.textContent || celdaBienes.innerText;
+
+                    const coincideNombre = nombre.toLowerCase().indexOf(textoBusqueda) > -1;
+                    const coincideBien = bienSeleccionado === "" || bienes.toLowerCase().indexOf(bienSeleccionado) > -1;
+
+                    if (coincideNombre && coincideBien) {
+                        filas[i].style.display = "";
+                    } else {
+                        filas[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

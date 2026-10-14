@@ -1,0 +1,202 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título principal para motores de búsqueda -->
+    <title>Hermandad DESTIERRO - Arendyll | Elvenar</title>
+    <!-- Descripción corta que aparece en Google -->
+    <meta name="description" content="Sitio oficial de la Hermandad DESTIERRO en Arendyll. Crónicas, edictos, normas de torneos y reclutamiento de jugadores activos.">
+    <!-- Enlace a la hoja de estilo externa -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- ENCABEZADO Y MENÚ DE NAVEGACIÓN PRINCIPAL  -->
+    <!-- ========================================== -->
+    <header>
+        <div class="logo">⚔️ DESTIERRO</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="cronicas.html">Crónicas y Consejo 🔮</a>
+            <a href="edictos.html">Edictos Sagrados 📜</a>
+            <a href="miembros.html">Lista de Miembros ⚔️</a>
+            <a href="#contacto">Reclutamiento</a>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- BANNER PRINCIPAL DE LA HERMANDAD           -->
+    <!-- ========================================== -->
+    <div class="banner-container">
+        <img src="imagenes/banner.jpg" alt="Hermandad DESTIERRO - Arendyll" class="img-banner">
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN HERO: BIENVENIDA Y RESUMEN         -->
+    <!-- ========================================== -->
+    <section id="inicio" class="hero">
+        <h1>░▒▓ D-E-S-T-I-E-R-R-O ▓▒░</h1>
+        <h2>Crónicas y Edictos de una Hermandad Forjada en Arendyll</h2>
+        
+        <div class="historia-box">
+            <h3>📜 Bienvenidos a la Hermanda Destierro</h3>
+            <p>En las tierras ancestrales de <strong>ARENDYLL</strong>, la Hermandad <strong>DESTIERRO</strong> se yergue como un bastión inquebrantable de lealtad, estrategia y compañerismo. Somos un gremio enfocado en la progresión mutua, dominando la Aventura de la Hermandad, los Torneos, la Aguja de la Eternidad.</p>
+            <blockquote class="juramento">"Jugar por y para la gloria y el beneficio mutuo de nuestra hermandad."</blockquote>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- LAS 3 CAJAS PRINCIPALES: RECLUTAMIENTO Y EVENTOS -->
+        <!-- ========================================== -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto;">
+            
+            <!-- CAJA 1: ESTADO DE RECLUTAMIENTO -->
+            <div style="background: rgba(21, 9, 36, 0.85); padding: 20px; border: 1px solid #d4af37; border-radius: 6px; text-align: left;">
+                <h3 style="color: #d4af37; margin-top: 0;">⚔️ Estado de Reclutamiento</h3>
+                <p><span style="background: #28a745; color: #fff; padding: 3px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85rem;">1 VACANTE DISPONIBLE</span> <strong>(24/25)</strong></p>
+                <p>Buscamos un alma activa para completar nuestras filas. Priorizamos Potenciados de:</p>
+                <p style="color: #ffd700; font-weight: bold;">💎 Acero | Seda | Gemas</p>
+                <a href="#contacto" class="btn-cta" style="margin-top: 10px; display: inline-block; padding: 8px 15px; font-size: 0.9rem;">Postularse Ahora</a>
+            </div>
+
+            <!-- CAJA 2: RELOJ DEL PRÓXIMO EVENTO -->
+            <div style="background: rgba(21, 9, 36, 0.85); padding: 20px; border: 1px solid #4a154b; border-radius: 6px; text-align: center;">
+                <h3 style="color: #d4af37; margin-top: 0;">🏰 Próximo Aventura </h3>
+                <p style="font-size: 0.85rem; color: #aaa; margin-bottom: 10px;" id="adh-desc">Aproximadamente Faltan: </p>
+                <div style="display: flex; justify-content: center; gap: 8px; margin: 15px 0;">
+                    <div style="background: rgba(10, 3, 18, 0.8); padding: 8px; border-radius: 4px; border: 1px solid #d4af37; min-width: 45px;">
+                        <span id="days" style="color: #d4af37; font-weight: bold; font-size: 1.2rem;">00</span>
+                        <div style="font-size: 0.65rem; color: #ccc;">DÍAS</div>
+                    </div>
+                    <div style="background: rgba(10, 3, 18, 0.8); padding: 8px; border-radius: 4px; border: 1px solid #d4af37; min-width: 45px;">
+                        <span id="hours" style="color: #d4af37; font-weight: bold; font-size: 1.2rem;">00</span>
+                        <div style="font-size: 0.65rem; color: #ccc;">HORAS</div>
+                    </div>
+                    <div style="background: rgba(10, 3, 18, 0.8); padding: 8px; border-radius: 4px; border: 1px solid #d4af37; min-width: 45px;">
+                        <span id="minutes" style="color: #d4af37; font-weight: bold; font-size: 1.2rem;">00</span>
+                        <div style="font-size: 0.65rem; color: #ccc;">MINS</div>
+                    </div>
+                    <div style="background: rgba(10, 3, 18, 0.8); padding: 8px; border-radius: 4px; border: 1px solid #d4af37; min-width: 45px;">
+                        <span id="seconds" style="color: #d4af37; font-weight: bold; font-size: 1.2rem;">00</span>
+                        <div style="font-size: 0.65rem; color: #ccc;">SEGS</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.8rem; color: #e0aaff;">¡Preparen talleres y fábricas nivel 1!</p>
+            </div>
+
+            <!-- CAJA 3: HISTORIAL DE AVENTURAS -->
+            <div class="caja-torre-contenedor">
+                <div style="background: rgba(21, 9, 36, 0.85); padding: 20px; border: 1px solid #4a154b; border-radius: 6px; position: relative; height: 100%; text-align: left;">
+                    <h3 style="color: #d4af37; margin-top: 0;">🏆 Histórico de Honor</h3>
+                    <p>Nuestra hermandad se destaca por una excelente organización en cada Aventura de la Hermandad.</p>
+                    
+                    <input type="checkbox" id="toggle-torneo" class="toggle-torneo-checkbox">
+                    <label for="toggle-torneo" class="btn-flotante-borde">📜 Posiciones</label>
+
+                    <div class="panel-posiciones-flotante">
+                        <h4>📜 Historial de Aventuras</h4>
+                        <div class="lista-posiciones">
+                            <div class="item-posicion">
+                                <span class="fecha">📅 13/09/2026</span>
+                                <span class="puesto plata">🥈 Puesto 16 (Top 25)</span>
+                            </div>
+                            <div class="item-posicion">
+                                <span class="fecha">📅 29/06/2026</span>
+                                <span class="puesto bronze">🥉 Puesto 29 (Top 50)</span>
+                            </div>
+                            <div class="item-posicion">
+                                <span class="fecha">📅 21/04/2026</span>
+                                <span class="puesto bronze">🥉 Puesto 30 (Top 50)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN DE RECLUTAMIENTO Y CONTACTO        -->
+    <!-- ========================================== -->
+    <section id="contacto" style="padding: 40px 20px;">
+        <div class="historia-box" style="max-width: 750px; margin: 0 auto; text-align: center;">
+            <h2 style="color: #d4af37; margin-top: 0; text-transform: uppercase;">⚔️ ¡Únete a Destierro!</h2>
+            <p style="color: #b084cc; font-size: 1.1rem; margin-bottom: 25px;">
+                ¿Buscas una hermandad activa, organizada y donde el progreso sea mutuo?
+            </p>
+
+            <div style="background: rgba(10, 3, 18, 0.7); border: 1px dashed #d4af37; padding: 25px; border-radius: 8px; text-align: left; margin-bottom: 20px;">
+                <h3 style="color: #d4af37; margin-top: 0; text-align: center;">📩 Contáctanos en Arendyll</h3>
+                <p>Para postularte o solicitar unirte a nuestras filas, ponte en contacto con nosotros directamente dentro del juego en el servidor de <strong>ARENDYLL</strong>:</p>
+                
+                <ul style="line-height: 1.8; color: #e0e0e0; list-style-type: '⚔️ ';">
+                    <li><strong>Busca a nuestra Hermandad:</strong> Escribe <strong style="color: #d4af37;">DESTIERRO</strong> en el buscador de hermandades y envía tu solicitud.</li>
+                    <li><strong>Escribe un mensaje privado:</strong> Contacta al Archimago <strong style="color: #ff4500;">SIDRAGASO</strong> o a nuestra Hechicera Suprema <strong style="color: #ba55d3;">Syltyn</strong>.</li>
+                    <li><strong>Requisito principal:</strong> "Jugadores activos y participativos. Amamos las Aventuras de la Hermandad como nuestro gran motor y nos organizamos con ilusión para disfrutar también de los Torneos y la Torre sin perder el norte: pasarlo bien juntos." </li>
+                    <li>"No exigimos marcas imposibles, solo tu participación y tus ganas de aportar al equipo"</li>
+                </ul>
+            </div>
+
+            <p style="color: #aaa; font-style: italic; font-size: 0.9rem;">
+                "Las puertas de los Desterrados están abiertas para quienes luchan con honor."
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PIE DE PÁGINA                              -->
+    <!-- ========================================== -->
+    <footer>
+        <h3>⚔️ Hermandad DESTIERRO - Arendyll</h3>
+        <p>Escríbenos en el juego buscando a la Hermandad o contacta a los Magos en Arendyll.</p>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">&copy; 2026 Hermandad DESTIERRO. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- SCRIPT DEL TEMPORIZADOR Y EVENTOS JSON     -->
+    <!-- ========================================== -->
+    <script>
+        let targetDate = new Date("2026-11-17T11:00:00Z").getTime();
+
+        // Cargar fecha desde eventos.json si existe
+        fetch('eventos.json')
+            .then(res => res.json())
+            .then(data => {
+                if(data && data.adh && data.adh.targetDate) {
+                    targetDate = new Date(data.adh.targetDate).getTime();
+                    if(data.adh.description) {
+                        document.getElementById('adh-desc').innerText = data.adh.description;
+                    }
+                }
+            })
+            .catch(() => console.log('Usando fecha predeterminada'));
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
